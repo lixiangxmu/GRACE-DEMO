@@ -1,0 +1,37 @@
+Event_A,Granger_Causality_P,Event_B
+earthquake|hit|kathmandu,0.002,earthquake|hit|nepal
+earthquake|hit|kathmandu,0.004,sadest|kill|people
+earthquake|hit|nepal,0.0,sadest|kill|people
+earthquake|hit|nepal,0.001,--null--|damage|kathmandu
+earthquake|strike|nepal,0.042,earthquake|hit|nepal
+earthquake|strike|nepal,0.0,sadest|kill|people
+earthquake|strike|nepal,0.014,--null--|damage|kathmandu
+quake|hit|nepal,0.004,sadest|kill|people
+earthquake|rock|nepal,0.0,sadest|kill|people
+earthquake|rock|nepal,0.041,earthquake|follow|magnitude earthquake
+earthquake|rock|nepal,0.0,--null--|damage|kathmandu
+relative|feel|tremor,0.01,earthquake|hit|nepal
+relative|feel|tremor,0.0,sadest|kill|people
+relative|feel|tremor,0.003,--null--|damage|kathmandu
+sadest|kill|people,0.007,earthquake|rock|nepal
+sadest|kill|people,0.002,--null--|trap|people
+sadest|kill|people,0.008,--null--|damage|kathmandu
+tower|collapse|avalanche,0.016,earthquake|hit|kathmandu
+tower|collapse|avalanche,0.0,quake|cause|damage
+tower|collapse|avalanche,0.001,--null--|trap|people
+tower|collapse|avalanche,0.032,earthquake|follow|magnitude earthquake
+tower|collapse|avalanche,0.037,--null--|damage|kathmandu
+quake|cause|damage,0.0,sadest|kill|people
+quake|cause|damage,0.017,earthquake|follow|magnitude earthquake
+quake|cause|damage,0.0,--null--|damage|kathmandu
+dharara|collapse|dharhara,0.0,sadest|kill|people
+dharara|collapse|dharhara,0.019,magnitude earthquake|hit|nep
+dharara|collapse|dharhara,0.016,earthquake|follow|magnitude earthquake
+dharara|collapse|dharhara,0.0,--null--|damage|kathmandu
+earthquake|follow|magnitude earthquake,0.014,earthquake|rock|nepal
+earthquake|follow|magnitude earthquake,0.024,relative|feel|tremor
+earthquake|follow|magnitude earthquake,0.0,sadest|kill|people
+earthquake|follow|magnitude earthquake,0.0,--null--|damage|kathmandu
+--null--|divert|flight,0.0,earthquake|strike|nepal
+--null--|damage|kathmandu,0.0,sadest|kill|people
+--null--|damage|kathmandu,0.002,tower|collapse|avalanche
