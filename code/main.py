@@ -71,7 +71,7 @@ def extract_by_spacy(text,nlp,stopword_spacy):
 
 @st.cache(allow_output_mutation=True)
 def load_amr_model():
-    model_large='/home/lzy/HDD1/anaconda3/envs/jxxdm/lib/python3.7/site-packages/amrlib/data/model_stog_large/'
+    model_large='../model_stog_large/'
     stog = amrlib.load_stog_model(model_large)
     return stog 
 amr_model = load_amr_model()
@@ -83,7 +83,7 @@ def get_gpt(PREFIX_ALL):
     BATCH_SIZE=10
     cur_run_name='run18-124M'
     sess = gpt2.start_tf_sess()
-    gpt2.load_gpt2(sess,run_name=cur_run_name,checkpoint_dir='/home/lzy/HDD1/bl/xgulu/backup/crisis_transl_graph/data/causalbank/checkpoint')
+    gpt2.load_gpt2(sess,run_name=cur_run_name,checkpoint_dir='../backup/crisis_transl_graph/data/causalbank/checkpoint')
     result_all=[]
     cause_flag='because'
     effect_flag='thus'
@@ -95,7 +95,7 @@ def get_gpt(PREFIX_ALL):
         for PREFIX in PREFIXS:
             text =gpt2.generate(sess,
                             run_name=cur_run_name,
-                            checkpoint_dir='/home/lzy/HDD1/bl/xgulu/backup/crisis_transl_graph/data/causalbank/checkpoint',
+                            checkpoint_dir='../backup/crisis_transl_graph/data/causalbank/checkpoint',
                             length=2,
                             temperature=0.8,
                             prefix=PREFIX,
@@ -115,7 +115,7 @@ def get_gpt(PREFIX_ALL):
 ######################################################################################
 
 configs = dict(
-        model_name='/home/lzy/HDD1/bl/xgulu/backup/pre_lm/roberta-large',
+        model_name='../backup/pre_lm/roberta-large',
         max_length=100,
         batch_size =1,
     )
@@ -123,7 +123,7 @@ configs = dict(
 @st.cache(allow_output_mutation=True)
 def load_info_model():
     info_model= MyModel(configs)
-    info_model.load_state_dict(torch.load('/home/lzy/HDD1/bl/xgulu/backup/crisis_transl_graph/data/info_identify/code/model_save/final/model_0.892.h5'))
+    info_model.load_state_dict(torch.load('../backup/crisis_transl_graph/data/info_identify/code/model_save/final/model_0.892.h5'))
     return info_model.cuda()
 info_model = load_info_model()
 
