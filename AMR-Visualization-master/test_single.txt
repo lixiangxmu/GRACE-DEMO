@@ -1,0 +1,6 @@
+(d / determine-01 :ARG1 (a / and :op1 (k / know-01 :ARG0 (ii / individual) :ARG1 (p / prepare-02 :ARG2 (e / earthquake) :location (h / home))) :op2 (b / behave-01 :ARG0 ii :ARG1 k)))
+(c / conduct-01 :ARG1 (s / study-01 :mod (a / abstract)) :manner (d / describe-01 :ARG0 s))
+(d / determine-01 :ARG1 (a / and :op1 (k / know-01 :ARG0 (ii / individual) :ARG1 (p / prepare-02 :ARG2 (e / earthquake) :location (h / home))) :op2 (b / behave-01 :ARG0 ii :ARG1 p)))
+(a / and :op1 (c / collect-01 :ARG1 (d / data :topic (f / fall-01 :ARG1 (r / rain-01) :mod (o / off)) :source (w / watershed :mod (s / small) :location (s2 / state :name (n / name :op1 "Colorado"))) :ARG1-of (a2 / abstract-02))) :op2 (a3 / analyze-01 :ARG1 d))
+(d / define-01 :ARG1 (t / thing :ARG2-of (c / characteristic-02 :ARG1 (f / flood-01)) :poss (a / and :op1 (a2 / area :mod (t2 / this)) :op2 (a3 / area :ARG1-of (r / resemble-01) :mod (o / other)))))
+(a / abstract-01 :ARG1 (d / device :ARG0-of (m / move-01 :ARG1 (s / strand :ARG0-of (d2 / descend-01))) :ARG1-of (f / fix-03) :domain (a2 / aircraft-type :name (n / name :op1 "firejumper")) :ARG1-of (s2 / specific-02)))

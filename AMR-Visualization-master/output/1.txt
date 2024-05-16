@@ -1,0 +1,15 @@
+digraph "AMR-Graph" {
+	rankdir=TB
+	s [label="study-01"]
+	a [label=abstract]
+	s -> a [label=":mod"]
+	c [label="conduct-01"]
+	s [label="study-01"]
+	c -> s [label=":ARG1"]
+	d [label="describe-01"]
+	730 [label=s]
+	d -> 730 [label=":ARG0"]
+	c [label="conduct-01"]
+	d [label="describe-01"]
+	c -> d [label=":manner"]
+}
